@@ -748,6 +748,11 @@ $skills: (photoshop: (percent: 0.6), illustrator: (percent: 0.55), wordpress: (p
     }
   }
 
+  .flexslider {
+    background-color: transparent;
+    border-color: transparent;
+  }
+
   /*  Blockquotes */
   blockquote {
     margin: 0 0px 30px 0px;
