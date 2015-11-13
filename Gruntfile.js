@@ -8,7 +8,7 @@
 //   images: _img
 //   fonts: _fonts
 
-module.exports = function (grunt) {
+module.exports = function(grunt) {
   // Show elapsed time after tasks run
   require('time-grunt')(grunt);
   // Load all Grunt tasks
@@ -23,11 +23,11 @@ module.exports = function (grunt) {
     watch: {
       sass: {
         files: ['<%= yeoman.app %>/_scss/**/*.{scss,sass}'],
-        tasks: ['sass:server', 'autoprefixer:dist']
+        tasks: ['sass:server', 'postcss:dist']
       },
-      autoprefixer: {
+      postcss: {
         files: ['<%= yeoman.app %>/_css/**/*.css'],
-        tasks: ['copy:stageCss', 'autoprefixer:dist']
+        tasks: ['copy:stageCss', 'postcss:dist']
       },
       jekyll: {
         files: [
@@ -135,9 +135,14 @@ module.exports = function (grunt) {
         }]
       }
     },
-    autoprefixer: {
+    postcss: {
       options: {
-        browsers: ['last 2 versions']
+      	map: true,
+        processors: [
+        require('autoprefixer')({
+          browsers: ['last 2 versions']
+        })
+        ]
       },
       dist: {
         expand: true,
@@ -332,7 +337,7 @@ module.exports = function (grunt) {
   });
 
   // Define Tasks
-  grunt.registerTask('serve', function (target) {
+  grunt.registerTask('serve', function(target) {
     if (target === 'dist') {
       return grunt.task.run(['build', 'browserSync:dist']);
     }
@@ -340,22 +345,22 @@ module.exports = function (grunt) {
     grunt.task.run([
       'clean:server',
       'concurrent:server',
-      'autoprefixer:dist',
+      'postcss:dist',
       'browserSync:server',
       'watch'
     ]);
   });
 
-  grunt.registerTask('server', function () {
+  grunt.registerTask('server', function() {
     grunt.log.warn('The `server` task has been deprecated. Use `grunt serve` to start a server.');
     grunt.task.run(['serve']);
   });
 
   // No real tests yet. Add your own.
   grunt.registerTask('test', [
-  //   'clean:server',
-  //   'concurrent:test',
-  //   'browserSync:test'
+    //   'clean:server',
+    //   'concurrent:test',
+    //   'browserSync:test'
   ]);
 
   grunt.registerTask('check', [
@@ -375,21 +380,21 @@ module.exports = function (grunt) {
     'useminPrepare',
     'concat',
     'cssmin',
-    'autoprefixer:dist',
+    'postcss:dist',
     'uglify',
     'imagemin',
     'svgmin',
     'filerev',
     'usemin',
     'htmlmin'
-    ]);
+  ]);
 
   grunt.registerTask('deploy', [
     'check',
     'test',
     'build',
     'buildcontrol'
-    ]);
+  ]);
 
   grunt.registerTask('default', [
     'check',
