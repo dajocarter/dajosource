@@ -241,7 +241,6 @@ module.exports = function(grunt) {
       dist: {
         files: [{
           expand: true,
-          dot: true,
           cwd: '<%= yeoman.app %>',
           src: [
             // Jekyll processes and moves HTML and text files.
@@ -263,7 +262,6 @@ module.exports = function(grunt) {
       stageCss: {
         files: [{
           expand: true,
-          dot: true,
           cwd: '<%= yeoman.app %>/_css',
           src: '**/*.css',
           dest: '.tmp/_css'
