@@ -38,4 +38,4 @@ markdown: kramdown
 #     coderay_bold_every: 10
 #     coderay_css: style
 
-highlighter: rouge
+highlighter: pygments
