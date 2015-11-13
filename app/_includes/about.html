@@ -15,7 +15,7 @@
           <p class="address">{{ contact.name }}</p>
           <p class="address">
             {% for item in contact.content %}
-            <a href="{{ item.line }}">{{ item.line }}</a> <br />
+            <a href="{{ item.url }}">{{ item.text }}</a> <br />
             {% endfor %}
           </p>
           {% endfor %}

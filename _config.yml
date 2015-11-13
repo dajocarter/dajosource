@@ -78,8 +78,10 @@ about:
   contact:
   - name: David Carter
     content:
-    - line: dajocarter
-    - line: dajocarter@gmail.com
+    - text: '@dajocarter'
+      url: '//twitter.com/dajocarter'
+    - text: dajocarter@gmail.com
+      url: mailto:dajocarter@gmail.com
   buttons:
   - url: "#"
     icon: ion-ios-cloud-download
@@ -198,5 +200,7 @@ contact:
     - title: Contact Details
       name: David Carter
       content:
-        - line: dajocarter
-        - line: dajocarter@gmail.com
+        - text: '@dajocarter'
+          url: '//twitter.com/dajocarter'
+        - text: dajocarter@gmail.com
+          url: mailto:dajocarter@gmail.com
