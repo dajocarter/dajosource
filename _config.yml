@@ -204,3 +204,7 @@ contact:
           url: '//twitter.com/dajocarter'
         - text: dajocarter@gmail.com
           url: mailto:dajocarter@gmail.com
+
+copyright:
+  - line: '&copy; Copyright 2014 CeeVee'
+  - line: Design by <a title="Styleshout" href="http://www.styleshout.com/">Styleshout</a>
