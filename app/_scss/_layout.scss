@@ -35,7 +35,7 @@ header {
   height: 800px;
   min-height: 500px;
   width: 100%;
-  background: #161415 url(../images/header-background.jpg) no-repeat top center;
+  background: #161415 url(../_img/header-background.jpg) no-repeat top center;
   background-size: cover !important;
   -webkit-background-size: cover !important;
   text-align: center;
@@ -398,7 +398,6 @@ $skills: (photoshop: (percent: 0.6), illustrator: (percent: 0.55), wordpress: (p
   }
 
   @-o-keyframes #{$skill} {
-
     from {
       width: 0%;
     }
@@ -409,7 +408,6 @@ $skills: (photoshop: (percent: 0.6), illustrator: (percent: 0.55), wordpress: (p
   }
 
   @-moz-keyframes #{$skill} {
-
     from {
       width: 0%;
     }
@@ -420,7 +418,6 @@ $skills: (photoshop: (percent: 0.6), illustrator: (percent: 0.55), wordpress: (p
   }
 
   @-webkit-keyframes #{$skill} {
-
     from {
       width: 0%;
     }
@@ -431,7 +428,6 @@ $skills: (photoshop: (percent: 0.6), illustrator: (percent: 0.55), wordpress: (p
   }
 
   @keyframes #{$skill} {
-
     from {
       width: 0%;
     }
@@ -496,7 +492,7 @@ $skills: (photoshop: (percent: 0.6), illustrator: (percent: 0.55), wordpress: (p
       -moz-transition: opacity 0.3s ease-in-out;
       -o-transition: opacity 0.3s ease-in-out;
       transition: opacity 0.3s ease-in-out;
-      background: url(../images/overlay-bg.png) repeat;
+      background: url(../_img/overlay-bg.png) repeat;
     }
 
     .link-icon {
@@ -660,8 +656,8 @@ $skills: (photoshop: (percent: 0.6), illustrator: (percent: 0.55), wordpress: (p
   }
 
   .header-col h1:before {
-    font-family: 'FontAwesome';
-    content: "\f0b1";
+    font-family: 'Ionicons';
+    content: "\f26c";
     padding-right: 10px;
     font-size: 72px;
     line-height: 72px;
@@ -712,7 +708,7 @@ $skills: (photoshop: (percent: 0.6), illustrator: (percent: 0.55), wordpress: (p
 /* ------------------------------------------------------------------ */
 
 #testimonials {
-  background: #1F1F1F url(../images/testimonials-bg.jpg) no-repeat center center;
+  background: #1F1F1F url(../_img/testimonials-bg.jpg) no-repeat center center;
   background-size: cover !important;
   -webkit-background-size: cover !important;
   background-attachment: fixed;
@@ -741,8 +737,8 @@ $skills: (photoshop: (percent: 0.6), illustrator: (percent: 0.55), wordpress: (p
     padding-top: 9px;
 
     h1:before {
-      font-family: 'FontAwesome';
-      content: "\f10d";
+      font-family: 'Ionicons';
+      content: "\f347";
       padding-right: 10px;
       font-size: 72px;
       line-height: 72px;
@@ -940,8 +936,8 @@ $skills: (photoshop: (percent: 0.6), illustrator: (percent: 0.55), wordpress: (p
     }
 
     &:before {
-      font-family: 'FontAwesome';
-      content: "\f0e0";
+      font-family: 'Ionicons';
+      content: "\f132";
       padding-right: 10px;
       font-size: 72px;
       line-height: 72px;
