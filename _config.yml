@@ -20,8 +20,8 @@ future: true
 show_drafts: true
 
 permalink: pretty
-paginate: 0
-paginate_path: 'page:num'
+#paginate: 0
+#paginate_path: 'page:num'
 
 # Markdown library
 markdown: kramdown
@@ -38,4 +38,4 @@ markdown: kramdown
 #     coderay_bold_every: 10
 #     coderay_css: style
 
-pygments: true
+highlighter: rouge
