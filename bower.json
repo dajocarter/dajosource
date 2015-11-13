@@ -5,5 +5,11 @@
     "normalize-css": "~3.0.1",
     "jquery": "~1.11.1",
     "modernizr": "~2.8.3"
+  },
+  "devDependencies": {
+    "Ionicons": "ionicons#~2.0.1",
+    "bourbon": "~4.2.6",
+    "neat": "~1.7.2",
+    "bitters": "~1.1.0"
   }
 }
