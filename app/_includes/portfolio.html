@@ -1,0 +1,39 @@
+<section id="portfolio">
+    <div class="row">
+        <div class="twelve columns collapsed">
+            <h1>Check out some of my work</h1>
+            <div id="portfolio-wrapper" class="bgrid-quarters s-bgrid-thirds cf">
+                {% for item in site.portfolio %}
+                <div class="columns portfolio-item">
+                    <div class="item-wrap">
+                        <a href="#modal-{{ forloop.index }}" title="">
+                            <img src="/_img/{{ item.img }}">
+                            <div class="overlay">
+                                <div class="portfolio-item-meta">
+                                    <h5>{{ item.title }}</h5>
+                                    <p>{{ item.description }}</p>
+                                </div>
+                            </div>
+                            <div class="link-icon"><i class="icon ion-plus"></i></div>
+                        </a>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        {% for item in site.portfolio %}
+        <div id="modal-{{ loop.index }}" class="popup-modal mfp-hide">
+            <img class="scale-with-grid" src="/_img/{{ item.img }}" alt="" />
+            <div class="description-box">
+                <h4>{{ item.title }}</h4>
+                <p>{{ item.content }}.</p>
+                <span class="categories"><i class="icon ion-pricetag"></i>{{ item.tags }}</span>
+            </div>
+            <div class="link-box">
+                <a href="{{ item.details }}">Details</a>
+                <a class="popup-modal-dismiss">Close</a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</section>

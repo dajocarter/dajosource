@@ -1,0 +1,17 @@
+<div class="row banner">
+	<div class="banner-text">
+		<h1 class="responsive-headline">{{ site.hero.headline }}</h1>
+		<h3>{{ site.hero.description }}</h3>
+		<hr>
+		{% if site.social %}
+		<ul class="social">
+			{% for item in site.social %}
+			<li><a href="{{ item.url }}"><i class="icon {{ item.icon }}"></i></a></li>
+			{% endfor %}
+		</ul>
+		{% endif %}
+	</div>
+</div>
+<p class="scrolldown">
+	<a class="smoothscroll" href="#about"><i class="icon ion-chevron-down"></i></a>
+</p>

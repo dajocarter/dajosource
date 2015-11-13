@@ -1,0 +1,17 @@
+<section id="call-to-action">
+  <div class="row">
+    <div class="two columns header-col">
+      <h1><span>{{ site.call.title }}</span></h1>
+    </div>
+    <div class="seven columns">
+      <h2 class="strikethrough">Want to set up an interview?</h2>
+
+			<p>Looking for an awesome and reliable developer? Try David Carter. Get him when you schedule an interview with the promocode <span>DAJOCARTER</span>.</p>
+    </div>
+    <div class="three columns action">
+      {% for button in site.call.buttons %}
+      <a href="{{ button.url }}" class="button">{{ button.text }}</a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
