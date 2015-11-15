@@ -35,7 +35,7 @@ header {
   height: 800px;
   min-height: 500px;
   width: 100%;
-  background: #161415 url(../_img/header-background.jpg) no-repeat top center;
+  background: #161415 url(../_img/darkrift-orig_full.jpg) no-repeat top center;
   background-size: cover !important;
   -webkit-background-size: cover !important;
   text-align: center;
@@ -398,6 +398,7 @@ $skills: (photoshop: (percent: 0.6), illustrator: (percent: 0.55), wordpress: (p
   }
 
   @-o-keyframes #{$skill} {
+
     from {
       width: 0%;
     }
@@ -408,6 +409,7 @@ $skills: (photoshop: (percent: 0.6), illustrator: (percent: 0.55), wordpress: (p
   }
 
   @-moz-keyframes #{$skill} {
+
     from {
       width: 0%;
     }
@@ -418,6 +420,7 @@ $skills: (photoshop: (percent: 0.6), illustrator: (percent: 0.55), wordpress: (p
   }
 
   @-webkit-keyframes #{$skill} {
+
     from {
       width: 0%;
     }
@@ -428,6 +431,7 @@ $skills: (photoshop: (percent: 0.6), illustrator: (percent: 0.55), wordpress: (p
   }
 
   @keyframes #{$skill} {
+
     from {
       width: 0%;
     }
