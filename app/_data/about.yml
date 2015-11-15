@@ -1,0 +1,12 @@
+title: Contact Details
+contact:
+- name: David Carter
+  content:
+  - text: '@dajocarter'
+    url: '//twitter.com/dajocarter'
+  - text: dajocarter@gmail.com
+    url: mailto:dajocarter@gmail.com
+buttons:
+- url: "#"
+  icon: ion-ios-cloud-download
+  text: Download Resume

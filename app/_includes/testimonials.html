@@ -2,12 +2,12 @@
   <div class="text-container">
     <div class="row">
       <div class="two columns header-col">
-          <h1><span>{{ site.testimonials.title }}</span></h1>
+          <h1><span>{{ site.data.testimonials.title }}</span></h1>
       </div>
       <div class="ten columns flex-container">
         <div class="flexslider">
           <ul class="slides">
-            {% for item in site.testimonials.quotes %}
+            {% for item in site.data.testimonials.quotes %}
             <li>
               <blockquote>
                 <p>{{ item.content }}</p>

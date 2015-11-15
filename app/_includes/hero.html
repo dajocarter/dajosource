@@ -1,11 +1,11 @@
 <div class="row banner">
 	<div class="banner-text">
-		<h1 class="responsive-headline">{{ site.hero.headline }}</h1>
-		<h3>{{ site.hero.description }}</h3>
+		<h1 class="responsive-headline">{{ site.data.hero.headline }}</h1>
+		<h3>{{ site.data.hero.description }}</h3>
 		<hr>
-		{% if site.social %}
+		{% if site.data.social %}
 		<ul class="social">
-			{% for item in site.social %}
+			{% for item in site.data.social %}
 			<li><a href="{{ item.url }}"><i class="icon {{ item.icon }}"></i></a></li>
 			{% endfor %}
 		</ul>

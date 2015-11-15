@@ -1,10 +1,10 @@
 <section id="contact">
     <div class="row section-head">
         <div class="two columns header-col">
-            <h1><span>{{ site.contact.title }}</span></h1>
+            <h1><span>{{ site.data.contact.title }}</span></h1>
         </div>
         <div class="ten columns">
-            <p class="lead">{{ site.contact.lead }}</p>
+            <p class="lead">{{ site.data.contact.lead }}</p>
         </div>
     </div>
     <div class="row">
@@ -13,7 +13,7 @@
 					{% include contact_form.html %}
         </div>
         <aside class="four columns footer-widgets">
-            {% for widget in site.contact.widgets %}
+            {% for widget in site.data.contact.widgets %}
             <div class="widget widget_contact">
                 <h4>{{ widget.title }}</h4>
                 <p class="address">{{ widget.name }}</p>

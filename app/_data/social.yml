@@ -1,0 +1,10 @@
+- url: "//twitter.com/dajocarter"
+  icon: ion-social-twitter
+- url: "//linkedin.com/in/dajocarter"
+  icon: ion-social-linkedin
+- url: "//instagram.com/dajocarter"
+  icon: ion-social-instagram
+- url: "//github.com/dajocarter"
+  icon: ion-social-octocat
+- url: "mailto:dajocarter@gmail.com"
+  icon: ion-email
