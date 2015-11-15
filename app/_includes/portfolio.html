@@ -22,7 +22,7 @@
             </div>
         </div>
         {% for item in site.portfolio %}
-        <div id="modal-{{ loop.index }}" class="popup-modal mfp-hide">
+        <div id="modal-{{ forloop.index }}" class="popup-modal mfp-hide">
             <img class="scale-with-grid" src="/_img/{{ item.img }}" alt="" />
             <div class="description-box">
                 <h4>{{ item.title }}</h4>
