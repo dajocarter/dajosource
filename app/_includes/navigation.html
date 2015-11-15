@@ -5,10 +5,10 @@
   <ul id="nav" class="nav">
     {% for item in site.menu %}
     <li>
-      {% if item.text == 'Blog' %}
-      <a href="{{ item.link }}">{{ item.text }}</a>
-      {% else %}
+      {% if item.url == page.url %}
       <a class="smoothscroll" href="{{ item.link }}">{{ item.text }}</a>
+      {% else %}
+      <a href="{{ site.domain }}{{ item.url }}">{{ item.text }}</a>
       {% endif %}
     </li>
     {% endfor %}

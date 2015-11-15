@@ -3,6 +3,7 @@
 # 2. config.build.yml
 # 3. config.yml
 
+domain: http://localhost:3000
 name: David Carter
 description: Source files for portfolio
 author:
@@ -43,6 +44,29 @@ kramdown:
 highlighter: pygments
 
 ###### HOMEPAGE VARIABLES DIVIDED BY SECTION ######
+menu:
+- link: "#home"
+  url: "/"
+  text: Home
+- link: "#home"
+  url: "/blog"
+  text: Blog
+- link: "#about"
+  url: "/"
+  text: About
+- link: "#resume"
+  url: "/"
+  text: Resume
+- link: "#portfolio"
+  url: "/"
+  text: Portfolio
+- link: "#testimonials"
+  url: "/"
+  text: Testimonials
+- link: "#contact"
+  url: "/"
+  text: Contact
+
 hero:
   headline: David Carter
   description: I'm a Manila based <span>graphic designer</span>, <span>illustrator</span> and <span>webdesigner</span> creating awesome and effective visual identities for companies of all sizes around the globe. Let's <a class="smoothscroll" href="#about">start scrolling</a> and learn more <a class="smoothscroll" href="#about">about me</a>.
@@ -58,22 +82,6 @@ social:
   icon: ion-social-octocat
 - url: "mailto:dajocarter@gmail.com"
   icon: ion-email
-
-menu:
-- link: "#home"
-  text: Home
-- link: "//dajocarter.com/blog"
-  text: Blog
-- link: "#about"
-  text: About
-- link: "#resume"
-  text: Resume
-- link: "#portfolio"
-  text: Portfolio
-- link: "#testimonials"
-  text: Testimonials
-- link: "#contact"
-  text: Contact
 
 about:
   title: Contact Details
@@ -135,8 +143,8 @@ portfolio:
   description: Hybrid Mobile App
   img: necter.jpg
   content: "It's Tinder for Groups. I built this on the Ionic framework for iOS and Android."
-  tags: Branding, Web Development
-  details: http://www.behance.net
+  tags: iOS, Android, Ionic Framework
+  details: http://www.gonecter.com
 - title: "Console"
   description: Web Development
   img: console.jpg
