@@ -41,23 +41,18 @@ jQuery(document).ready(function($) {
   var sections = $("section");
   var navigation_links = $("#nav-wrap a");
 
-  sections.waypoint({
+  sections.waypoint(function(direction) {
 
-    handler: function(event, direction) {
+    var active_section;
 
-      var active_section;
+    active_section = $('#' + this.element.id);
+    if (direction === "up") active_section = active_section.prev();
+    var active_link = $('#nav-wrap a[href="#' + active_section.attr('id') + '"]');
+    navigation_links.parent().removeClass("current");
+    active_link.parent().addClass("current");
 
-      active_section = $(this);
-      if (direction === "up") active_section = active_section.prev();
-
-      var active_link = $('#nav-wrap a[href="#' + active_section.attr("id") + '"]');
-
-      navigation_links.parent().removeClass("current");
-      active_link.parent().addClass("current");
-
-    },
+  }, {
     offset: '35%'
-
   });
 
   /*----------------------------------------------------*/
@@ -138,14 +133,14 @@ jQuery(document).ready(function($) {
   /*	contact form
 ------------------------------------------------------*/
 
-  $('form#contactForm button.submit').click(function() {
+  $('#contactForm button.submit').click(function() {
 
     $('#image-loader').fadeIn();
 
-    var contactName = $('#contactForm #contactName').val();
-    var contactEmail = $('#contactForm #contactEmail').val();
-    var contactSubject = $('#contactForm #contactSubject').val();
-    var contactMessage = $('#contactForm #contactMessage').val();
+    var contactName = $('#contactName').val();
+    var contactEmail = $('#contactEmail').val();
+    var contactSubject = $('#contactSubject').val();
+    var contactMessage = $('#contactMessage').val();
 
     var data = 'contactName=' + contactName + '&contactEmail=' + contactEmail +
       '&contactSubject=' + contactSubject + '&contactMessage=' + contactMessage;
