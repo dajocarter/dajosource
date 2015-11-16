@@ -295,6 +295,16 @@
     h3, .info {
       text-align: center;
     }
+
+    .info {
+      span {
+        display: none;
+      }
+
+      em {
+        display: block;
+      }
+    }
   }
 
   .bars {

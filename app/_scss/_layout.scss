@@ -106,7 +106,7 @@ header {
         color: #fff;
 
         &:hover {
-          color: #11ABB0;
+          color: $teal;
         }
       }
     }
@@ -132,7 +132,7 @@ header {
     transition: all .3s ease-in-out;
 
     &:hover {
-      color: #11ABB0;
+      color: $teal;
     }
   }
 }
@@ -204,7 +204,7 @@ ul#nav {
     }
 
     &.current a {
-      color: #F06000;
+      color: $orange;
     }
   }
 }
@@ -224,7 +224,7 @@ ul#nav {
   }
 
   a:hover, a:focus {
-    color: #11ABB0;
+    color: $teal;
   }
 
   h2 {
@@ -285,7 +285,7 @@ ul#nav {
   overflow: hidden;
 
   a, a:visited {
-    color: #11ABB0;
+    color: $teal;
   }
 
   a:hover, a:focus {
@@ -298,7 +298,7 @@ ul#nav {
     letter-spacing: 1px;
 
     span {
-      border-bottom: 3px solid #11ABB0;
+      border-bottom: 3px solid $teal;
       padding-bottom: 6px;
     }
   }
@@ -926,7 +926,7 @@ $skills: (photoshop: (percent: 0.6), illustrator: (percent: 0.55), wordpress: (p
   }
 
   a, a:visited {
-    color: #11ABB0;
+    color: $teal;
   }
 
   a:hover, a:focus {
@@ -1000,7 +1000,7 @@ $skills: (photoshop: (percent: 0.6), illustrator: (percent: 0.55), wordpress: (p
 
     &:focus {
       color: #fff;
-      background-color: #11ABB0;
+      background-color: $teal;
     }
   }
 
@@ -1023,7 +1023,7 @@ $skills: (photoshop: (percent: 0.6), illustrator: (percent: 0.55), wordpress: (p
   }
 
   span.required {
-    color: #11ABB0;
+    color: $teal;
     font-size: 13px;
   }
 }
@@ -1042,7 +1042,7 @@ $skills: (photoshop: (percent: 0.6), illustrator: (percent: 0.55), wordpress: (p
 }
 
 #message-success {
-  color: #11ABB0;
+  color: $teal;
 }
 
 #message-warning i,
@@ -1192,7 +1192,7 @@ footer {
       margin: 0;
       padding: 0;
       margin-left: 42px;
-      color: #F06000;
+      color: $orange;
 
       &:first-child {
         margin-left: 0;
