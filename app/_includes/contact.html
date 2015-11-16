@@ -1,34 +1,30 @@
 <section id="contact">
-    <div class="row section-head">
-        <div class="two columns header-col">
-            <h1><span>{{ site.data.contact.title }}</span></h1>
-        </div>
-        <div class="ten columns">
-            <p class="lead">{{ site.data.contact.lead }}</p>
-        </div>
+  <div class="row section-head">
+    <div class="two columns header-col">
+      <h1><span>{{ site.data.contact.title }}</span></h1>
     </div>
-    <div class="row">
-        <div class="eight columns">
-          <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
-					{% include contact_form.html %}
-        </div>
-        <aside class="four columns footer-widgets">
-            {% for widget in site.data.contact.widgets %}
-            <div class="widget widget_contact">
-                <h4>{{ widget.title }}</h4>
-                <p class="address">{{ widget.name }}</p>
-                <p class="address">
-                    {% for item in widget.content %}
-                    <a href="{{ item.url }}">{{ item.text }}</a> <br />
-                    {% endfor %}
-                </p>
-            </div>
-            {% endfor %}
-            <div class="widget widget_tweets">
-                <h4 class="widget-title">Latest Tweets</h4>
-                <div id="tw-widget1">
-                </div>
-            </div>
-        </aside>
+    <div class="ten columns">
+      <p class="lead">{{ site.data.contact.lead }}</p>
     </div>
+  </div>
+  <div class="row">
+    <div class="eight columns">
+      <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+      
+      {% include contact_form.html %}
+    </div>
+    <aside class="four columns footer-widgets">
+      {% for widget in site.data.contact.widgets %}
+      <div class="widget widget_contact">
+        <h4>{{ widget.title }}</h4>
+        <p class="address">{{ widget.name }}</p>
+        <p class="address">
+          {% for item in widget.content %}
+          <a href="{{ item.url }}">{{ item.text }}</a> <br />
+          {% endfor %}
+        </p>
+      </div>
+      {% endfor %}
+    </aside>
+  </div>
 </section>
