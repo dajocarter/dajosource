@@ -56,6 +56,15 @@ jQuery(document).ready(function($) {
   });
 
   /*----------------------------------------------------*/
+  /* Prevent hamburger menu from jumping on close
+------------------------------------------------------*/
+
+  $('.mobile-btn').on('click', function(e) {
+    e.preventDefault();
+    $('#nav').slideToggle();
+  });
+
+  /*----------------------------------------------------*/
   /*	Make sure that #header-background-image height is
 /* equal to the browser height.
 ------------------------------------------------------ */

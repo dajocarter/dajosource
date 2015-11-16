@@ -208,12 +208,11 @@
     }
 
     /* display menu panels */
-    &:target > ul#nav {
+    ul#nav {
       display: block;
       padding: 30px 20px 48px 20px;
       background: #1f2024;
       margin: 0 30px;
-      clear: both;
     }
   }
 
