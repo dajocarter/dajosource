@@ -1,0 +1,402 @@
+/* tools */
+.cf:before,
+.cf:after {
+  content: " ";
+  display: table;
+}
+
+.cf:after {
+  clear: both;
+}
+
+body {
+  //  font-family: "Open Sans", sans-serif;
+  height: auto;
+  min-height: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  //  font-family: "Montserrat", sans-serif;
+}
+
+header, main, footer {
+  position: relative;
+  z-index: 1;
+}
+
+main, .notepad-share-icons, .notepad-disqus {
+  background: white;
+}
+
+.imagepadding {
+  padding: 15px;
+}
+
+.imagepadding_left {
+  padding-left: 15px;
+}
+
+.imagepadding_right {
+  padding-right: 15px;
+}
+
+.imagepadding_top {
+  padding-top: 15px;
+}
+
+.imagepadding_bottom {
+  padding-bottom: 15px;
+}
+
+.summer-blog-menu {
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-right: 0.9375rem;
+  float: right;
+
+  //  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 2.625rem;
+  height: 10rem;
+}
+
+.summer-mobile-menu {
+  a {
+    display: inline-block;
+    outline: none;
+    color: black;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+
+    &:hover {
+      color: black;
+    }
+  }
+
+  ul {
+    background: black;
+    position: absolute;
+    width: 100%;
+    transform: translate3d(0, -110%, 0);
+    top: 0;
+    left: 0;
+    list-style-type: none;
+    margin: 0;
+    width: 100%;
+    overflow: hidden;
+    transition: transform .3s;
+    padding-top: 0;
+    padding-bottom: 3.125rem;
+
+    &.opened {
+      transform: translate3d(0, 0, 0);
+    }
+
+    li {
+      display: block;
+      margin: 0;
+      width: 100%;
+      font-size: 2.25rem;
+      text-align: center;
+      padding: 0.3125rem;
+
+      &.summer-mobile-close-btn {
+        padding-right: 1.25rem;
+
+        a {
+          color: white;
+        }
+      }
+
+      a {
+        color: white;
+        display: block;
+        width: 100%;
+        height: 100%;
+        outline: none;
+      }
+    }
+  }
+}
+
+.summer-site-head {
+  .summer-site-head-menu {
+    background: white;
+
+    .summer-blog-logo {
+      display: inline-block;
+      max-height: 5rem;
+
+      img {
+        max-height: 5rem;
+      }
+    }
+
+    .title {
+      display: inline-block;
+      padding: 0;
+      padding-left: 1.25rem;
+      height: 5rem;
+      line-height: 5rem;
+      vertical-align: middle;
+
+      //      font-family: "Montserrat", sans-serif;
+      font-size: 1.625rem;
+      font-weight: 700;
+      color: black;
+      text-transform: uppercase;
+      letter-spacing: -0.0625rem;
+
+      a {
+        color: black;
+
+        &:hover {
+          color: black;
+        }
+      }
+    }
+  }
+
+  .summer-site-head-content {
+    width: 100%;
+    text-align: center;
+    background-color: black;
+    background-size: cover;
+
+    .summer-site-head-title-bg {
+      display: inline-block;
+      padding: 0.625rem;
+      background: #e51843;
+      line-height: 1.1;
+    }
+
+    h1, h2 {
+      margin: 0;
+      padding: 0;
+      color: white;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      padding-top: 4.375rem;
+      font-size: 0.875rem;
+      margin-bottom: 0.9375rem;
+    }
+
+    h2 {
+      font-size: 2.5rem;
+      padding-bottom: 5rem;
+      font-weight: 700;
+      line-height: 1.3;
+    }
+  }
+}
+
+.summer-content .summer-index-post {
+  visibility: hidden;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+  border-bottom: 0.0625rem solid #d9d9d9;
+
+  &:first-of-type {
+    padding-top: 5rem;
+  }
+
+  .datetime {
+    margin-bottom: 2.5rem;
+  }
+
+  .summer-post-meta {
+    display: block;
+    text-align: center;
+
+    .day {
+      display: block;
+      font-size: 3.25rem;
+      font-weight: 800;
+      color: #e51843;
+
+      //      font-family: "Montserrat", sans-serif;
+   
+    }
+
+    .month-year {
+      display: block;
+      font-size: 1rem;
+      color: black;
+      font-size: 0.875rem;
+
+      //      font-family: "Montserrat", sans-serif;
+      text-transform: uppercase;
+    }
+  }
+
+  .summer-post-header .summer-post-title {
+    color: black;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 1.625rem;
+    margin: 0;
+    padding: 0;
+    line-height: 1.1;
+
+    a {
+      color: black;
+    }
+  }
+
+  .summer-post-excerpt {
+    color: black;
+    font-size: 1.25rem;
+    margin-top: 0.625rem;
+    text-align: center;
+
+    p {
+      margin: 0;
+      font-size: 1.25rem;
+    }
+  }
+
+  .summer-index-post-tags {
+    font-size: 0.8125rem;
+    color: black;
+    margin-top: 1.5625rem;
+
+    //    font-family: "Montserrat", sans-serif;
+    text-align: center;
+
+    a {
+      display: inline-block;
+      padding: 0.3125rem 0.625rem;
+      color: black;
+      border: 0.0625rem solid black;
+      border-radius: 0.125rem;
+
+      &:hover {
+        color: #e51843;
+        border: 0.0625rem solid #e51843;
+      }
+    }
+  }
+}
+
+nav.pagination {
+  padding-top: 5.625rem;
+  padding-bottom: 5.625rem;
+  text-align: center;
+
+  .newer-posts,
+  .older-posts,
+  .page-number {
+    font-size: 0.875rem;
+    display: inline-block;
+    padding: 0.625rem 1.25rem;
+    border-radius: 0.1875rem;
+    color: black;
+    border: 0.125rem solid black;
+  }
+
+  .newer-posts,
+  .older-posts {
+    &:hover {
+      border: 0.125rem solid #e51843;
+      color: #e51843;
+    }
+
+    &.faded {
+      color: gray;
+      border: 0.125rem solid gray;
+
+      a {
+        color: gray;
+      }
+    }
+  }
+
+  .newer-posts .fa {
+    margin-right: 0.625rem;
+  }
+
+  .older-posts .fa {
+    margin-left: 0.625rem;
+  }
+}
+
+.summer-site-footer {
+  background: black;
+
+  .social-icons,
+  .copyright {
+    width: 100%;
+    padding: 0;
+    text-align: center;
+  }
+
+  .copyright {
+    color: white;
+    float: none;
+    text-align: center;
+    font-size: 0.8125rem;
+    padding-top: 3.75rem;
+    padding-bottom: 1.25rem;
+
+    a {
+      color: white;
+    }
+  }
+
+  .social-icons {
+    text-align: center;
+    float: none;
+    padding-bottom: 3.75rem;
+
+    a {
+      color: black;
+    }
+  }
+}
+
+.fadeInDown {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-name: fadeInDown;
+  visibility: visible !important;
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.tag-template .summer-index-post:first-of-type {
+  padding-top: 3.125rem;
+}
+
+.summer-tags-container {
+  background: #f2f2f2;
+
+  .summer-tags-header {
+    //    font-family: "Montserrat", sans-serif;
+    font-size: 1.125rem;
+    color: black;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0;
+    padding-top: 3.125rem;
+    padding-bottom: 3.125rem;
+    text-align: center;
+
+    .tag-name {
+      color: #e51843;
+      text-transform: none;
+    }
+  }
+}
