@@ -9,6 +9,7 @@ description: Source files for portfolio
 author:
   name: David Carter
   email: dajocarter@gmail.com
+  handle: '@dajocarter'
 
 # Grunt handles images and assets.
 exclude: ['_img', '_css', '_js', '_fonts',

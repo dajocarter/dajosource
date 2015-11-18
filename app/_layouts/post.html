@@ -1,6 +1,14 @@
 ---
 layout: default
 ---
-<article class="post">
-{{ content }}
-</article>
+<header id="home">
+  {% include blog_navigation.html %}
+
+  {% include blog_hero.html %}
+</header>
+
+<main>
+  <article class="post">
+  {{ content }}
+  </article>
+</main>

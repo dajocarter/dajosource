@@ -1,19 +1,49 @@
 ---
 layout: default
-title: Blog
+title: My Blog Posts
+
+sypnosis: I'm not one to talk about myself so most of my posts are just my <span>notes</span> from following in-depth tutorials on <span>web development</span>. Here and there you might find some <span>explanations of math</span> solutions. If I find something <span>useful</span> or solve an <span>irritating</span> bug, I might write a situational post. Whenever I <span>make something</span>, I'll usually write an accompanying post.
 ---
 
 <header id="home">
-  {% include navigation.html %}
+  {% include blog_navigation.html %}
 
-  {% include hero.html %}
+  {% include blog_hero.html %}
 </header>
 
 <main id="blog">
-  <h1>Blog Posts</h1>
   <section class="posts">
     {% for post in site.posts %}
-    <article><time>{{ post.date | date_to_string }}</time> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></article>
+    <article class="summer-index-post post row">
+      <div class="small-12 medium-3 large-2 columns datetime">
+        <span class="summer-post-meta">
+          <time datetime="{{ post.date | date_to_long_string }}">
+            <span class="day">
+              {{ post.date | date: "%d" }}
+            </span>
+            <span class="month-year">
+              {{ post.date | date: "%b %Y" }}
+            </span>
+          </time>
+        </span>
+      </div>
+      <div class="small-12 medium-9 large-10 columns">
+        <header class="summer-post-header">
+          <h3 class="summer-post-title"><a href="{{ post.url }}" itemprop="url">{{ post.title }}</a></h3>
+        </header>
+        <section class="summer-post-excerpt">
+           <p>{{ post.content | strip_html | truncatewords: 40 }}</p>
+        </section>
+       
+        <div class="summer-index-post-tags">
+          {% for tag in post.taxonomy.tag %}
+          <span class="post-tag-{{tag}}"><a href="{{ site.domain }}/blog/tag/{{ tag }}">{{ tag }}</a></span>
+          {% if not forloop.last %} 
+          {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+    </article>
     {% endfor %}
   </section>
 </main>
