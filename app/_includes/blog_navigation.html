@@ -1,0 +1,16 @@
+<nav id="nav-wrap">
+  <a class="mobile-btn" href="#" title="Show navigation">Show navigation</a>
+  <a class="mobile-btn" href="#" title="Hide navigation">Hide navigation</a>
+
+  <ul id="nav" class="nav">
+    {% for item in site.data.blog_menu %}
+    <li>
+      {% if item.url == page.url %}
+      <a class="smoothscroll" href="{{ item.link }}">{{ item.text }}</a>
+      {% else %}
+      <a href="{{ site.domain }}{{ item.url }}">{{ item.text }}</a>
+      {% endif %}
+    </li>
+    {% endfor %}
+  </ul>
+</nav>
