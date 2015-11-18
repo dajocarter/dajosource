@@ -69,12 +69,12 @@ jQuery(document).ready(function($) {
 /* equal to the browser height.
 ------------------------------------------------------ */
 
-  $('header').css({
+  $('#home').css({
     'height': $(window).height()
   });
   $(window).on('resize', function() {
 
-    $('header').css({
+    $('#home').css({
       'height': $(window).height()
     });
     $('body').css({
@@ -88,7 +88,7 @@ jQuery(document).ready(function($) {
 
   $(window).on('scroll', function() {
 
-    var h = $('header').height();
+    var h = $('#home').height();
     var y = $(window).scrollTop();
     var nav = $('#nav-wrap');
 
