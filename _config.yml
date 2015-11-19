@@ -17,6 +17,15 @@ exclude: ['_img', '_css', '_js', '_fonts',
 
 include: ['.htaccess']
 
+defaults:
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+      type: "posts"
+    values:
+      layout: "default"
+      is_post: true
+
 # _config.build.yml sets future and show_drafts to false on `grunt build`
 future: true
 show_drafts: true
