@@ -30,12 +30,10 @@ sypnosis: I'm not one to talk about myself so most of my posts are just my <span
         <section class="post-excerpt">
            <p>{{ post.content | strip_html | truncatewords: 40 }}</p>
         </section>
-       
+
         <div class="index-post-tags">
-          {% for tag in post.taxonomy.tag %}
+          {% for tag in post.categories %}
           <span class="post-tag-{{tag}}"><a href="{{ site.domain }}/blog/tag/{{ tag }}">{{ tag }}</a></span>
-          {% if not forloop.last %} 
-          {% endif %}
           {% endfor %}
         </div>
       </div>
