@@ -34,6 +34,9 @@ permalink: /blog/:title.html
 #paginate: 0
 #paginate_path: 'page:num'
 
+gems:
+ - jekyll-archives
+
 # Markdown library
 markdown: kramdown
 kramdown:
