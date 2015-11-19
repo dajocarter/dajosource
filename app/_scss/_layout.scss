@@ -82,6 +82,10 @@ body {
       }
     }
 
+    p {
+      color: #fff;
+    }
+
     hr {
       width: 60%;
       margin: 18px auto 24px auto;
@@ -398,7 +402,6 @@ $skills: (photoshop: (percent: 0.6), illustrator: (percent: 0.55), wordpress: (p
   }
 
   @-o-keyframes #{$skill} {
-
     from {
       width: 0%;
     }
@@ -409,7 +412,6 @@ $skills: (photoshop: (percent: 0.6), illustrator: (percent: 0.55), wordpress: (p
   }
 
   @-moz-keyframes #{$skill} {
-
     from {
       width: 0%;
     }
@@ -420,7 +422,6 @@ $skills: (photoshop: (percent: 0.6), illustrator: (percent: 0.55), wordpress: (p
   }
 
   @-webkit-keyframes #{$skill} {
-
     from {
       width: 0%;
     }
@@ -431,7 +432,6 @@ $skills: (photoshop: (percent: 0.6), illustrator: (percent: 0.55), wordpress: (p
   }
 
   @keyframes #{$skill} {
-
     from {
       width: 0%;
     }
