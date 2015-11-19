@@ -63,26 +63,6 @@
     }
   }
 
-  .post-share {
-    padding-top: 8rem;
-    padding-bottom: 8rem;
-  }
-
-  .author-info {
-    padding-top: 8rem;
-    padding-bottom: 8rem;
-  }
-
-  .author-info .post-author {
-    text-align: left;
-
-    .post-author-avatar {
-      margin-right: 5rem;
-      margin-bottom: 0;
-      float: left;
-    }
-  }
-
   .page-container .page-title h1 {
     font-size: 7rem;
     padding-top: 9rem;
@@ -128,11 +108,6 @@
     font-size: 7rem;
   }
 
-  .author-info {
-    padding-top: 11rem;
-    padding-bottom: 11rem;
-  }
-
   .page-container .page-title h1 {
     padding-top: 11rem;
     padding-bottom: 11rem;
@@ -142,11 +117,6 @@
 @media only screen and (min-width: 90em) {
   .post-template .post-title h1 {
     font-size: 8.5rem;
-  }
-
-  .author-info {
-    padding-top: 12rem;
-    padding-bottom: 12rem;
   }
 
   .page-container .page-title h1 {
