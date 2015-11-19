@@ -7,8 +7,10 @@ layout: default
   {% include blog_hero.html %}
 </header>
 
-<main>
-  <article class="post">
-  {{ content }}
+<main id="post-container" class="post-container intro-effect-sliced" role="main">
+  <article class="post-content post">
+    <div>
+      {{ content }}
+    </div>
   </article>
 </main>

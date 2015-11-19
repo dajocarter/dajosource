@@ -2,6 +2,8 @@
 layout: post
 title:  "Yo Jekyll!"
 categories: jekyll update
+
+synopsis: This site was installed with Yeoman. Here's what it comes with.
 ---
 
 # 'Allo, 'Allo!
