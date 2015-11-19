@@ -30,7 +30,7 @@ defaults:
 future: true
 show_drafts: true
 
-permalink: pretty
+permalink: /blog/:title.html
 #paginate: 0
 #paginate_path: 'page:num'
 
