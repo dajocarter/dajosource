@@ -1,5 +1,5 @@
 @media screen and (max-width: 27em) {
-  .post-template .summer-post-title, .post-template .summer-post-content {
+  .post-template .post-title, .post-template .post-content {
     font-size: 50%;
   }
 
@@ -7,158 +7,106 @@
     display: none;
   }
 
-  .summer-page-container .summer-page-title, .summer-page-container .summer-page-content {
+  .page-container .page-title, .page-container .page-content {
     font-size: 50%;
   }
 }
 
 @media only screen and (min-width: 40.063em) {
-  .summer-blog-menu {
-    padding-top: 1.75rem;
-    padding-bottom: 1.5625rem;
-    font-size: 1rem;
-
-    ul {
-      background: transparent;
-      position: relative;
-      width: auto;
-      list-style-type: none;
-      margin: 0;
-      width: auto;
-      overflow: auto;
-      transform: none;
-      visibility: visible;
-      padding-top: 0;
-      padding-bottom: 0;
-
-      li {
-        display: inline-block;
-        margin-left: 1.25rem;
-        width: auto;
-        font-size: 1rem;
-        text-align: left;
-        padding: 0;
-
-        a {
-          color: black;
-          display: inline-block;
-          border-bottom: 0.1875rem solid transparent;
-          width: auto;
-          height: auto;
-
-          &:hover {
-            border-bottom: 0.1875rem solid #e51843;
-          }
-        }
-      }
-    }
-  }
-
-  .summer-site-head .summer-site-head-content h1 {
-    padding-top: 7.5rem;
-    font-size: 1rem;
-  }
-
-  .summer-site-head .summer-site-head-content h2 {
-    font-size: 3.75rem;
-    padding-bottom: 7.5rem;
-    font-weight: 700;
-  }
-
-  .summer-content .summer-index-post {
-    padding-top: 4.375rem;
-    padding-bottom: 4.375rem;
+  .content .index-post {
+    padding-top: 7rem;
+    padding-bottom: 7rem;
 
     &:first-of-type {
-      padding-top: 7.5rem;
+      padding-top: 12rem;
     }
 
     .datetime {
       margin-bottom: 0;
     }
 
-    .summer-post-header .summer-post-title {
+    .post-header .post-title {
       text-align: left;
-      font-size: 2.125rem;
-      margin-bottom: 0.9375rem;
+      font-size: 3.4rem;
+      margin-bottom: 1.5rem;
     }
 
-    .summer-post-excerpt,
-    .summer-index-post-tags {
+    .post-excerpt,
+    .index-post-tags {
       text-align: left;
     }
   }
 
-  .tag-template .summer-index-post:first-of-type {
-    padding-top: 4.6875rem;
+  .tag-template .index-post:first-of-type {
+    padding-top: 7.5rem;
   }
 
-  .summer-tags-container .summer-tags-header {
-    font-size: 1.5625rem;
+  .tags-container .tags-header {
+    font-size: 2.5rem;
   }
 
-  .post-template .summer-blog-menu ul li a {
+  .post-template .blog-menu ul li a {
     color: white;
 
     &:hover {
-      border-bottom: 0.1875rem solid white;
+      border-bottom: 0.3rem solid white;
     }
   }
 
-  .post-template .summer-post-title h1 {
-    font-size: 3.125rem;
+  .post-template .post-title h1 {
+    font-size: 5rem;
   }
 
-  .post-template .summer-post-content > div:not(.summer-post-title) {
+  .post-template .post-content > div:not(.post-title) {
     margin: -18% auto 0;
 
     p:first-child {
-      font-size: 1.625rem;
+      font-size: 2.6rem;
     }
   }
 
-  .summer-post-share {
-    padding-top: 5rem;
-    padding-bottom: 5rem;
+  .post-share {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
   }
 
-  .summer-author-info {
-    padding-top: 5rem;
-    padding-bottom: 5rem;
+  .author-info {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
   }
 
-  .summer-author-info .summer-post-author {
+  .author-info .post-author {
     text-align: left;
 
-    .summer-post-author-avatar {
-      margin-right: 3.125rem;
+    .post-author-avatar {
+      margin-right: 5rem;
       margin-bottom: 0;
       float: left;
     }
   }
 
-  .summer-page-container .summer-page-title h1 {
-    font-size: 4.375rem;
-    padding-top: 5.625rem;
-    padding-bottom: 5.625rem;
+  .page-container .page-title h1 {
+    font-size: 7rem;
+    padding-top: 9rem;
+    padding-bottom: 9rem;
   }
 
-  .summer-page-container .summer-page-content > div:not(.summer-page-title) p:first-child {
-    font-size: 1.625rem;
+  .page-container .page-content > div:not(.page-title) p:first-child {
+    font-size: 2.6rem;
   }
 
-  .summer-disqus {
-    padding-top: 5.3125rem;
-    padding-bottom: 9.375rem;
+  .disqus {
+    padding-top: 8.5rem;
+    padding-bottom: 15rem;
   }
 }
 
 @media screen and (max-width: 47em) {
-  .post-template .summer-post-title, .post-template .summer-post-content {
+  .post-template .post-title, .post-template .post-content {
     font-size: 70%;
   }
 
-  .summer-page-container .summer-page-title, .summer-page-container .summer-page-content {
+  .page-container .page-title, .page-container .page-content {
     font-size: 70%;
   }
 }
@@ -178,87 +126,38 @@
 }
 
 @media only screen and (min-width: 70em) {
-  .summer-site-head .summer-site-head-content h1 {
-    padding-top: 9.375rem;
-    font-size: 1rem;
+  .post-template .post-title h1 {
+    font-size: 7rem;
   }
 
-  .summer-site-head .summer-site-head-content h2 {
-    font-size: 4.375rem;
-    padding-bottom: 9.375rem;
-    font-weight: 700;
-  }
-
-  .summer-site-footer {
-    .social-icons,
-    .copyright {
-      width: 49%;
-      padding: 5rem;
-    }
-
-    .copyright {
-      text-align: left;
-      float: left;
-    }
-
-    .social-icons {
-      text-align: right;
-      float: right;
-    }
-  }
-
-  .post-template .summer-post-title h1 {
-    font-size: 4.375rem;
-  }
-
-  .post-template .summer-post-content > div:not(.summer-post-title) {
+  .post-template .post-content > div:not(.post-title) {
     margin: -10% auto 0;
   }
 
-  .summer-author-info {
-    padding-top: 6.875rem;
-    padding-bottom: 6.875rem;
+  .author-info {
+    padding-top: 11rem;
+    padding-bottom: 11rem;
   }
 
-  .summer-page-container .summer-page-title h1 {
-    padding-top: 6.875rem;
-    padding-bottom: 6.875rem;
+  .page-container .page-title h1 {
+    padding-top: 11rem;
+    padding-bottom: 11rem;
   }
 }
 
 @media only screen and (min-width: 90em) {
-  .summer-site-head .summer-site-head-content h1 {
-    padding-top: 10.3125rem;
+  .post-template .post-title h1 {
+    font-size: 8.5rem;
   }
 
-  .summer-site-head .summer-site-head-content h2 {
-    font-size: 5rem;
-    padding-bottom: 10.3125rem;
+  .author-info {
+    padding-top: 12rem;
+    padding-bottom: 12rem;
   }
 
-  .post-template .summer-post-title h1 {
-    font-size: 5.3125rem;
-  }
-
-  .summer-author-info {
-    padding-top: 7.5rem;
-    padding-bottom: 7.5rem;
-  }
-
-  .summer-page-container .summer-page-title h1 {
-    font-size: 5.3125rem;
-    padding-top: 8.125rem;
-    padding-bottom: 8.125rem;
-  }
-}
-
-@media only screen and (min-width: 100em) {
-  .summer-site-head .summer-site-head-content h1 {
-    padding-top: 12.5rem;
-  }
-
-  .summer-site-head .summer-site-head-content h2 {
-    font-size: 6.25rem;
-    padding-bottom: 12.5rem;
+  .page-container .page-title h1 {
+    font-size: 8.5rem;
+    padding-top: 13rem;
+    padding-bottom: 13rem;
   }
 }
