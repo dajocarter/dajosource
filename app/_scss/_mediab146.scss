@@ -58,8 +58,6 @@
   }
 
   .post-template .post-content > div:not(.post-title) {
-    margin: -18% auto 0;
-
     p:first-child {
       font-size: 2.6rem;
     }
@@ -128,10 +126,6 @@
 @media only screen and (min-width: 70em) {
   .post-template .post-title h1 {
     font-size: 7rem;
-  }
-
-  .post-template .post-content > div:not(.post-title) {
-    margin: -10% auto 0;
   }
 
   .author-info {
