@@ -7,6 +7,10 @@
     padding-top: 8rem;
   }
 
+  &:last-of-type {
+    border-bottom: 0;
+  }
+
   .datetime {
     margin-bottom: 4rem;
   }
@@ -14,6 +18,7 @@
   .post-meta {
     display: block;
     text-align: center;
+    line-height: 1;
 
     .day {
       display: block;
