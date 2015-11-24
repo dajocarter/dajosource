@@ -1,21 +1,21 @@
 - link: "#home"
-  url: "/"
+  url: "/index.html"
   text: Home
 - link: "#home"
-  url: "/blog"
+  url: "/blog/index.html"
   text: Blog
 - link: "#about"
-  url: "/"
+  url: "/index.html"
   text: About
 - link: "#resume"
-  url: "/"
+  url: "/index.html"
   text: Resume
 - link: "#portfolio"
-  url: "/"
+  url: "/index.html"
   text: Portfolio
 - link: "#testimonials"
-  url: "/"
+  url: "/index.html"
   text: Testimonials
 - link: "#contact"
-  url: "/"
+  url: "/index.html"
   text: Contact
