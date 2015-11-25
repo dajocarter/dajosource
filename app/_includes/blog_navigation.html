@@ -1,7 +1,4 @@
 <nav id="nav-wrap">
-  <a class="mobile-btn" href="#nav-wrap" title="Show navigation">Show navigation</a>
-  <a class="mobile-btn" href="#" title="Hide navigation">Hide navigation</a>
-
   <ul id="nav" class="nav">
     {% for item in site.data.blog_menu %}
     <li>
@@ -13,4 +10,6 @@
     </li>
     {% endfor %}
   </ul>
+  <button class="mobile-btn">More</button>
+  <ul id="hidden-nav" class="hidden"></ul>
 </nav>

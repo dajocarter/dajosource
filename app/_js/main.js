@@ -56,6 +56,62 @@ jQuery(document).ready(function($) {
   });
 
   /*----------------------------------------------------*/
+  /* Priority+/Greedy Navigation
+------------------------------------------------------*/
+
+  var navBtn = $('#nav-wrap button');
+  var visibleLinks = $('#nav');
+  var hiddenLinks = $('#hidden-nav');
+
+  var numOfItems = 0;
+  var totalSpace = 0;
+  var breakWidths = [];
+
+  // Get initial state
+  visibleLinks.children().outerWidth(function(i, w) {
+    totalSpace += w;
+    numOfItems += 1;
+    breakWidths.push(totalSpace);
+  });
+
+  var availableSpace, numOfVisibleItems, requiredSpace;
+
+  function check() {
+
+    // Get instant state
+    availableSpace = visibleLinks.width() - 10;
+    numOfVisibleItems = visibleLinks.children().length;
+    requiredSpace = breakWidths[numOfVisibleItems - 1];
+
+    // There is not enought space
+    if (requiredSpace > availableSpace) {
+      visibleLinks.children().last().prependTo(hiddenLinks);
+      numOfVisibleItems -= 1;
+      check();
+      // There is more than enough space
+    } else if (availableSpace > breakWidths[numOfVisibleItems]) {
+      hiddenLinks.children().first().appendTo(visibleLinks);
+      numOfVisibleItems += 1;
+    }
+    // Update the button accordingly
+    navBtn.attr("count", numOfItems - numOfVisibleItems);
+    if (numOfVisibleItems === numOfItems) {
+      navBtn.addClass('hidden');
+    } else navBtn.removeClass('hidden');
+  }
+
+  // Window listeners
+  $(window).resize(function() {
+    check();
+  });
+
+  navBtn.on('click', function() {
+    hiddenLinks.toggleClass('hidden');
+  });
+
+  check();
+
+  /*----------------------------------------------------*/
   /*	Make sure that #header-background-image height is
 /* equal to the browser height.
 ------------------------------------------------------ */
@@ -71,6 +127,7 @@ jQuery(document).ready(function($) {
     $('body').css({
       'width': $(window).width()
     })
+
   });
 
   /*----------------------------------------------------*/
