@@ -1,6 +1,6 @@
 title: Contact Form
 menu: Contact
-lead: Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.
+lead: "If you'd like to get in touch with me, feel free to use the contact form below to send me an email."
 widgets:
   - title: Contact Details
     name: David Carter

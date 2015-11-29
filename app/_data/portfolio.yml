@@ -1,48 +1,24 @@
 - title: "Necter"
   description: Hybrid Mobile App
   img: necter.jpg
-  content: "It's Tinder for Groups. I built this on the Ionic framework for iOS and Android."
-  tags: iOS, Android, Ionic Framework
+  content: "It's Tinder for groups. I built this on the Ionic framework for iOS and Android."
+  tags: "iOS, Android, Ionic Framework, Angular, Firebase"
   details: http://www.gonecter.com
-- title: "Console"
+- title: "Lesson Zest"
   description: Web Development
-  img: console.jpg
-  content: "Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit."
-  tags: Branding, Web Development
-  details: http://www.behance.net
-- title: "Judah"
-  description: Webdesign
-  img: judah.jpg
-  content: "Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit."
-  tags: Branding
-  details: http://www.behance.net
-- title: "Into The Light"
-  description: Photography
-  img: intothelight.jpg
-  content: "Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit."
-  tags: Photography
-  details: http://www.behance.net
-- title: "Farmer Boy"
-  description: Branding
-  img: farmerboy.jpg
-  content: "Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit."
-  tags: Branding, Webdesign
-  details: http://www.behance.net
-- title: "Girl"
-  description: Photography
-  img: girl.jpg
-  content: "Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit."
-  tags: Photography
-  details: http://www.behance.net
-- title: "Origami"
-  description: Illustration
-  img: origami.jpg
-  content: "Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit."
-  tags: Branding, Illustration
-  details: http://www.behance.net
-- title: "Retrocam"
+  img: lessonZest-logo-01.png
+  content: "Lesson Zest is a subscription-based service for after-school lesson plans. The site contains many modules, or themes, each with ten lessons that any adult can carry out."
+  tags: "Web Development, Wordpress"
+  details: http://www.lessonzest.com
+- title: "Kinsmen Distillery"
   description: Web Development
-  img: retrocam.jpg
-  content: "Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit."
-  tags: Webdesign, Photography
-  details: http://www.behance.net
+  img: kinsmen-reversed.png
+  content: "Kinsmen Distillery is a single-page site featuring parallax scrolling."
+  tags: "Web Development, Wordpress, Parallax"
+  details: http://www.kinsmendistillery.com
+- title: "Boyd & Company"
+  description: Web Development
+  img: logo-withShield2.png
+  content: "I worked on the responsiveness of the website as well as implementing the map feature at the bottom of the landing page."
+  tags: "Web Development, Wordpress, Mapbox"
+  details: http://www.boydandcompany.com
