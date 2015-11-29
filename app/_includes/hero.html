@@ -1,19 +1,7 @@
 <div class="row banner">
 	<div class="banner-text">
-		<h1 class="responsive-headline">
-		{% if page.title %}
-			{{ page.title }}
-		{% else %}
-			{{ site.data.hero.title }}
-		{% endif %}
-		</h1>
-		<h3>
-		{% if page.description %}
-			{{ page.description }}
-		{% else %}
-			{{ site.data.hero.description }}
-		{% endif %}
-		</h3>
+		<h1 class="responsive-headline">{{ page.title }}</h1>
+		<h3>{{ page.description }}</h3>
 
 		{% if page.url == "/index.html" %}
 			<hr>
