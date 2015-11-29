@@ -12,6 +12,7 @@
     "magnific-popup": "~1.0.0",
     "flexslider": "~2.5.0",
     "fittext": "*",
-    "bootstrap-sass": "~3.3.5"
+    "bootstrap-sass": "~3.3.5",
+    "MathJax": "~2.5.3"
   }
 }
