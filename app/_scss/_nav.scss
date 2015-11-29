@@ -5,36 +5,37 @@
   button {
     align-self: stretch;
     transition: all .4s ease-out;
-    padding: 0 1rem 0 1.5rem;
+    padding: 0 1rem;
     outline: 0;
     border: 0;
     font-size: 1.1rem;
     font-weight: bold;
     height: 32px;
-    margin: 8px 1rem 0 0;
+    width: 43.59375px;
+    margin: 8px 3.5rem 0 0;
+    position: relative;
 
     &.hidden {
       transition: none;
-      border-right: 0.5rem solid #b6b6b6;
       width: 0;
       padding: 0;
+      margin: 0;
       overflow: hidden;
     }
 
-    &::after {
+    .icon {
+      position: absolute;
+      top: 50%;
+      left: 33.33333%;
+      transform: translate(-33.33333%, -50%);
+    }
+
+    span {
       content: attr(count);
-      display: inline-flex;
-      width: 20px;
-      height: 20px;
-      align-items: center;
-      justify-content: center;
-      background: $orange;
-      color: #f2f2f2;
-      border-radius: 50%;
-      font-size: 14px;
-      line-height: 14px;
-      margin-left: 1rem;
-      margin-right: calc(-1rem + -8px);
+      position: absolute;
+      top: 50%;
+      left: 66.66667%;
+      transform: translate(-66.66667%, -50%);
     }
   }
 }

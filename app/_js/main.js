@@ -94,7 +94,7 @@ jQuery(document).ready(function($) {
       numOfVisibleItems += 1;
     }
     // Update the button accordingly
-    navBtn.attr("count", numOfItems - numOfVisibleItems);
+    navBtn.find('span').text(numOfItems - numOfVisibleItems);
     if (numOfVisibleItems === numOfItems) {
       navBtn.addClass('hidden');
     } else navBtn.removeClass('hidden');

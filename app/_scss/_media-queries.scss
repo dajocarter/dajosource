@@ -11,7 +11,7 @@
 @media only screen and (max-width: 1024px) {
  /* header styles
 ------------------------------------------------------------------ */
-  header .banner-text h1 {
+  #home .banner-text h1 {
     font: 80px/1.1em 'opensans-bold', sans-serif;
     letter-spacing: -1px;
     margin: 0 auto 12px auto;
@@ -23,7 +23,7 @@
 @media only screen and (max-width: 900px) {
  /* header styles
 ------------------------------------------------------------------ */
-  header {
+  #home {
     .banner {
       padding-bottom: 12px;
     }
@@ -219,7 +219,7 @@
 
   /* Header Styles
   -------------------------------------------------------------------- */
-  header {
+  #home {
     .banner {
       padding-bottom: 12px;
       padding-top: 6px;
@@ -488,7 +488,7 @@
 
   /* header styles
   -------------------------------------------------------------------- */
-  header {
+  #home {
     .banner {
       padding-top: 24px;
     }
