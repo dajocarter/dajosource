@@ -1,14 +1,46 @@
 <div class="row banner">
 	<div class="banner-text">
-		<h1 class="responsive-headline">{{ site.data.hero.headline }}</h1>
-		<h3>{{ site.data.hero.description }}</h3>
-		<hr>
-		{% if site.data.social %}
-		<ul class="social">
-			{% for item in site.data.social %}
-			<li><a href="{{ item.url }}"><i class="icon {{ item.icon }}"></i></a></li>
-			{% endfor %}
-		</ul>
+		<h1 class="responsive-headline">
+		{% if page.title %}
+			{{ page.title }}
+		{% else %}
+			{{ site.data.hero.title }}
+		{% endif %}
+		</h1>
+		<h3>
+		{% if page.description %}
+			{{ page.description }}
+		{% else %}
+			{{ site.data.hero.description }}
+		{% endif %}
+		</h3>
+
+		{% if page.url == "/index.html" %}
+			<hr>
+
+			<ul class="social">
+				{% for item in site.data.social %}
+				<li><a href="{{ item.url }}"><i class="icon {{ item.icon }}"></i></a></li>
+				{% endfor %}
+			</ul>
+		{% elsif page.url != "/blog/index.html" %}
+			<hr>
+
+			<ul class="social">
+				<!-- Twitter -->
+				<li><a href="http://twitter.com/share?text={{page.title}}&url={{site.domain}}{{page.url}}&via=dajocarter&related=dajocarter"><i class="icon ion-social-twitter"></i></a></li>
+				<!-- Facebook -->
+				<li><a href="http://www.facebook.com/sharer.php?u={{site.domain}}{{page.url}}&p[title]={{page.title}}"><i class="icon ion-social-facebook"></i></a></li>
+				<!-- Google+ -->
+				<li><a href="https://plus.google.com/share?url={{site.domain}}{{page.url}}"><i class="icon ion-social-googleplus"></i></a></li>
+				<!-- LinkedIn -->
+				<li><a href="http://www.linkedin.com/shareArticle?mini=true&url={{site.domain}}{{page.url}}&title={{page.title}}&summary={{page.sypnosis}}&source={{site.domain}}"><i class="icon ion-social-linkedin"></i></a></li>
+				<!-- Tumblr -->
+				<li><a href="http://www.tumblr.com/share/link?url={{site.domain}}{{page.url}}&name={{page.title}}&description={{page.sypnosis}}"><i class="icon ion-social-tumblr"></i></a></li>
+				<!-- Reddit -->
+				<li><a href="http://www.reddit.com/submit?url={{site.domain}}{{page.url}}&title={{page.title}}"><i class="icon ion-social-reddit"></i></a></li>
+			</ul>
+			<p>Use the above buttons to share this post.</p>
 		{% endif %}
 	</div>
 </div>
