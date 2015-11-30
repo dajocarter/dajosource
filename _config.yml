@@ -37,6 +37,16 @@ permalink: /blog/:title.html
 gems:
  - jekyll-archives
 
+jekyll-archives:
+  enabled: 'all'
+  layout: 'archive'
+  permalinks:
+    year: '/blog/:year/'
+    month: '/blog/:year/:month/'
+    day: '/blog/:year/:month/:day/'
+    tag: '/blog/tag/:name/'
+    category: '/blog/category/:name/'
+
 # Markdown library
 markdown: kramdown
 kramdown:
