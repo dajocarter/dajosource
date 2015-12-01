@@ -3,7 +3,7 @@
 		<h1 class="responsive-headline">{{ page.title | capitalize }}</h1>
 		<h3>{{ page.description }}</h3>
 
-		{% if page.url == "/index.html" %}
+		{% if page.url == "/" %}
 			<hr>
 
 			<ul class="social">
@@ -11,7 +11,7 @@
 				<li><a href="{{ item.url }}"><i class="icon {{ item.icon }}"></i></a></li>
 				{% endfor %}
 			</ul>
-		{% elsif page.url != "/blog/index.html" %}
+		{% elsif page.is_post %}
 			<hr>
 
 			<ul class="social">
