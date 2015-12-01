@@ -6,7 +6,7 @@
         {% if item.url == page.url %}
         <a class="smoothscroll" href="{{ item.link }}">{{ item.text }}</a>
         {% else %}
-        <a href="{{ site.domain }}{{ item.url }}">{{ item.text }}</a>
+        <a href="{{ item.url | prepend: site.domain }}">{{ item.text }}</a>
         {% endif %}
       </li>
       {% endfor %}
@@ -16,7 +16,7 @@
         {% if item.url == page.url %}
         <a class="smoothscroll" href="{{ item.link }}">{{ item.text }}</a>
         {% else %}
-        <a href="{{ site.domain }}{{ item.url }}">{{ item.text }}</a>
+        <a href="{{ item.url | prepend: site.domain }}">{{ item.text }}</a>
         {% endif %}
       </li>
       {% endfor %}

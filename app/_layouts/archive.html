@@ -21,7 +21,7 @@ layout: default
       </div>
       <div class="col-sm-12 col-md-9 col-lg-10">
         <header class="post-header">
-          <h3 class="post-title"><a href="{{site.domain}}{{ post.url }}" itemprop="url">{{ post.title }}</a></h3>
+          <h3 class="post-title"><a href="{{ post.url | prepend: site.domain }}" itemprop="url">{{ post.title }}</a></h3>
         </header>
         <section class="post-excerpt">
            <p>{{ post.content | markdownify | strip_html | truncatewords: 40 }}</p>

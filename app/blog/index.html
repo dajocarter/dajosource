@@ -25,7 +25,7 @@ description: I'm not one to talk about myself so most of my posts are just my <s
       </div>
       <div class="col-sm-12 col-md-9 col-lg-10">
         <header class="post-header">
-          <h3 class="post-title"><a href="{{site.domain}}{{ post.url }}" itemprop="url">{{ post.title }}</a></h3>
+          <h3 class="post-title"><a href="{{ post.url | prepend: site.domain }}" itemprop="url">{{ post.title }}</a></h3>
         </header>
         <section class="post-excerpt">
            <p>{{ post.content | strip_html | truncatewords: 40 }}</p>
