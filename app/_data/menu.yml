@@ -1,24 +1,24 @@
 main:
 - link: "#home"
-  url: "/index.html"
+  url: "/"
   text: Home
 - link: "#home"
-  url: "/blog/index.html"
+  url: "/blog/"
   text: Blog
 - link: "#about"
-  url: "/index.html"
+  url: "/"
   text: About
 - link: "#resume"
-  url: "/index.html"
+  url: "/"
   text: Resume
 - link: "#portfolio"
-  url: "/index.html"
+  url: "/"
   text: Portfolio
 - link: "#testimonials"
-  url: "/index.html"
+  url: "/"
   text: Testimonials
 - link: "#contact"
-  url: "/index.html"
+  url: "/"
   text: Contact
 
 blog:

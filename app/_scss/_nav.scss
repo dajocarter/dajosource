@@ -53,7 +53,6 @@
 
 #hidden-nav {
   position: absolute;
-  background: #d8d8d8;
   right: 0;
   top: 100%;
 
@@ -63,5 +62,10 @@
 
   li {
     padding: 1rem;
+
+    a {
+      color: #191919;
+      text-decoration: none;
+    }
   }
 }

@@ -159,6 +159,10 @@ body {
   &.opaque {
     background-color: #333;
 
+    .nav {
+      background-color: #333;
+    }
+
     a {
       color: #fff;
     }
@@ -169,6 +173,10 @@ body {
     padding: 0;
     border: none;
     outline: none;
+  }
+
+  li.current a {
+    color: $orange;
   }
 
   /* hide toggle button */
@@ -205,10 +213,6 @@ ul#nav {
       &:active {
         background-color: transparent !important;
       }
-    }
-
-    &.current a {
-      color: $orange;
     }
   }
 }
