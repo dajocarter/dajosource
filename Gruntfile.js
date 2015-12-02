@@ -12,7 +12,10 @@ module.exports = function(grunt) {
   // Show elapsed time after tasks run
   require('time-grunt')(grunt);
   // Load all Grunt tasks
-  require('jit-grunt')(grunt);
+  require('jit-grunt')(grunt, {
+    useminPrepare: 'grunt-usemin',
+    buildcontrol: 'grunt-build-control'
+  });
 
   grunt.initConfig({
     // Configurable paths
@@ -286,8 +289,8 @@ module.exports = function(grunt) {
     buildcontrol: {
       dist: {
         options: {
-          remote: '../',
-          branch: 'gh-pages',
+          remote: 'git@github.com:dajocarter/dajocarter.github.io.git',
+          branch: 'master',
           commit: true,
           push: true
         }
