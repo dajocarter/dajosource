@@ -38,18 +38,18 @@ jQuery(document).ready(function($) {
   /* Highlight the current section in the navigation bar
 ------------------------------------------------------*/
 
-  var sections = $("section");
-  var navigation_links = $("#nav-wrap a");
+  var sections = $('section');
+  var navigation_links = $('#nav-wrap a');
 
   sections.waypoint(function(direction) {
 
     var active_section;
 
     active_section = $('#' + this.element.id);
-    if (direction === "up") active_section = active_section.prev();
+    if (direction === 'up') active_section = active_section.prev();
     var active_link = $('#nav-wrap a[href="#' + active_section.attr('id') + '"]');
-    navigation_links.parent().removeClass("current");
-    active_link.parent().addClass("current");
+    navigation_links.parent().removeClass('current');
+    active_link.parent().addClass('current');
 
   }, {
     offset: '35%'
@@ -126,7 +126,7 @@ jQuery(document).ready(function($) {
     });
     $('body').css({
       'width': $(window).width()
-    })
+    });
 
   });
 
@@ -175,8 +175,8 @@ jQuery(document).ready(function($) {
   /*	Flexslider
 /*----------------------------------------------------*/
   $('.flexslider').flexslider({
-    namespace: "flex-",
-    controlsContainer: ".flex-container",
+    namespace: 'flex-',
+    controlsContainer: '.flex-container',
     animation: 'slide',
     controlNav: true,
     directionNav: false,
@@ -204,13 +204,13 @@ jQuery(document).ready(function($) {
 
     $.ajax({
 
-      type: "POST",
-      url: "inc/sendEmail.php",
+      type: 'POST',
+      url: 'inc/sendEmail.php',
       data: data,
       success: function(msg) {
 
         // Message was sent
-        if (msg == 'OK') {
+        if (msg === 'OK') {
           $('#image-loader').fadeOut();
           $('#message-warning').hide();
           $('#contactForm').fadeOut();
