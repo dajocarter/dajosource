@@ -35,7 +35,7 @@ body {
   height: 800px;
   min-height: 500px;
   width: 100%;
-  background: #161415 url(../_img/fog.jpeg) no-repeat top center;
+  background: #161415 url(../img/fog.jpeg) no-repeat top center;
   background-size: cover !important;
   -webkit-background-size: cover !important;
   text-align: center;
@@ -504,7 +504,7 @@ $skills: (photoshop: (percent: 0.6), illustrator: (percent: 0.55), wordpress: (p
       -moz-transition: opacity 0.3s ease-in-out;
       -o-transition: opacity 0.3s ease-in-out;
       transition: opacity 0.3s ease-in-out;
-      background: url(../_img/overlay-bg.png) repeat;
+      background: url(../img/overlay-bg.png) repeat;
     }
 
     .link-icon {
@@ -720,7 +720,7 @@ $skills: (photoshop: (percent: 0.6), illustrator: (percent: 0.55), wordpress: (p
 /* ------------------------------------------------------------------ */
 
 #testimonials {
-  background: #1F1F1F url(../_img/testimonials-bg.jpg) no-repeat center center;
+  background: #1F1F1F url(../img/testimonials-bg.jpg) no-repeat center center;
   background-size: cover !important;
   -webkit-background-size: cover !important;
   background-attachment: fixed;
