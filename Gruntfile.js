@@ -301,21 +301,6 @@ module.exports = function(grunt) {
         }]
       }
     },
-    filerev: {
-      options: {
-        length: 4
-      },
-      dist: {
-        files: [{
-          src: [
-            '<%= yeoman.dist %>/js/**/*.js',
-            '<%= yeoman.dist %>/css/**/*.css',
-            '<%= yeoman.dist %>img/**/*.{gif,jpg,jpeg,png,svg,webp}',
-            '<%= yeoman.dist %>/fonts/**/*.{eot*,otf,svg,ttf,woff}'
-          ]
-        }]
-      }
-    },
     buildcontrol: {
       dist: {
         options: {
@@ -411,7 +396,6 @@ module.exports = function(grunt) {
     'copy:dist',
     'imagemin',
     'svgmin',
-    'filerev',
     'htmlmin'
   ]);
 
