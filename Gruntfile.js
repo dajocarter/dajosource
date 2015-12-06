@@ -110,12 +110,12 @@ module.exports = function(grunt) {
       ]
     },
     sass: {
-      options: {
-        debugInfo: false,
-        lineNumbers: false,
-        loadPath: 'app/_bower_components'
-      },
       dist: {
+        options: {
+          debugInfo: false,
+          lineNumbers: false,
+          loadPath: 'app/_bower_components'
+        },
         files: [{
           expand: true,
           cwd: '<%= yeoman.app %>/_scss',
@@ -127,7 +127,8 @@ module.exports = function(grunt) {
       server: {
         options: {
           debugInfo: true,
-          lineNumbers: true
+          lineNumbers: true,
+          loadPath: 'app/_bower_components'
         },
         files: [{
           expand: true,
@@ -176,19 +177,6 @@ module.exports = function(grunt) {
         }
       }
     },
-    useminPrepare: {
-      options: {
-        dest: '<%= yeoman.dist %>'
-      },
-      html: '<%= yeoman.dist %>/index.html'
-    },
-    usemin: {
-      options: {
-        assetsDirs: ['<%= yeoman.dist %>', '<%= yeoman.dist %>/img']
-      },
-      html: ['<%= yeoman.dist %>/**/*.html'],
-      css: ['<%= yeoman.dist %>/_css/**/*.css']
-    },
     htmlmin: {
       dist: {
         options: {
@@ -206,15 +194,50 @@ module.exports = function(grunt) {
       }
     },
     // Usemin adds files to concat
-    concat: {},
+    concat: {
+      options: {
+        separator: ';',
+        sourceMap: true
+      },
+      dist: {
+        src: [
+          '<%= yeoman.app %>/_bower_components/jquery/dist/jquery.js',
+          '<%= yeoman.app %>/_bower_components/magnific-popup/dist/jquery.magnific-popup.js',
+          '<%= yeoman.app %>/_bower_components/waypoints/lib/jquery.waypoints.js',
+          '<%= yeoman.app %>/_bower_components/flexslider/jquery.flexslider.js',
+          '<%= yeoman.app %>/_bower_components/fittext/fittext.js',
+          '<%= yeoman.app %>/_bower_components/MathJax/MathJax.js',
+          '<%= yeoman.app %>/_js/plugins.js',
+          '<%= yeoman.app %>/_js/main.js'
+        ],
+        dest: '.tmp/concat/script.js'
+      }
+    },
     // Usemin adds files to uglify
-    uglify: {},
-    // Usemin adds files to cssmin
+    uglify: {
+      options: {
+        mangle: false,
+        sourceMap: true,
+        preserveComments: false
+      },
+      dist: {
+        files: {
+          '<%= yeoman.dist %>/js/main.min.js': '.tmp/concat/script.js'
+        }
+      }
+    },
     cssmin: {
       dist: {
         options: {
           check: 'gzip'
-        }
+        },
+        files: [{
+          expand: true,
+          cwd: '.tmp/_css',
+          src: '*.css',
+          dest: '<%= yeoman.dist %>/css',
+          ext: '.css'
+        }]
       }
     },
     imagemin: {
@@ -249,8 +272,8 @@ module.exports = function(grunt) {
             // Jekyll processes and moves HTML and text files.
             // Usemin moves CSS and javascript inside of Usemin blocks.
             // Copy moves asset files and directories.
+            'css/*',
             'img/*',
-            'fonts/**/*',
             // Like Jekyll, exclude files & folders prefixed with an underscore.
             //'!**/_*{,/**}',
             '!_css',
@@ -262,7 +285,6 @@ module.exports = function(grunt) {
             '!_posts',
             '!_scss',
             // Explicitly add any files your site needs for distribution here.
-            '_bower_components/jquery/jquery.min.js',
             'favicon.ico',
             'apple-touch*.png'
           ],
@@ -337,10 +359,6 @@ module.exports = function(grunt) {
         'sass:server',
         'copy:stageCss',
         'jekyll:server'
-      ],
-      dist: [
-        'sass:dist',
-        'copy:dist'
       ]
     }
   });
@@ -385,16 +403,15 @@ module.exports = function(grunt) {
     'clean',
     // Jekyll cleans files from the target directory, so must run first
     'jekyll:dist',
-    'concurrent:dist',
-    'useminPrepare',
-    'concat',
-    'cssmin',
+    'sass:dist',
     'postcss:dist',
-    'uglify',
+    'cssmin',
+    'concat:dist',
+    'uglify:dist',
+    'copy:dist',
     'imagemin',
     'svgmin',
     'filerev',
-    'usemin',
     'htmlmin'
   ]);
 
