@@ -3,7 +3,7 @@
 # 2. config.build.yml
 # 3. config.yml
 
-domain: http://localhost:3000
+#domain: http://localhost:3000
 name: David Carter
 description: Source files for portfolio
 author:
