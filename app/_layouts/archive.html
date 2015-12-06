@@ -26,6 +26,12 @@ layout: default
         <section class="post-excerpt">
            <p>{{ post.content | markdownify | strip_html | truncatewords: 40 }}</p>
         </section>
+
+        <div class="index-post-tags">
+          {% for tag in post.categories %}
+          <span class="post-tag-{{tag}}"><a href="{{ site.domain }}/blog/category/{{ tag }}/">{{ tag }}</a></span>
+          {% endfor %}
+        </div>
       </div>
     </article>
     {% endfor %}
