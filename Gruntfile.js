@@ -152,7 +152,7 @@ module.exports = function(grunt) {
         expand: true,
         cwd: '.tmp/_css',
         src: '*.css',
-        dest: '<%= yeoman.app %>/_css'
+        dest: '.tmp/_css'
       }
     },
     jekyll: {
