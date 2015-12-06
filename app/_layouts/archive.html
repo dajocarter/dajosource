@@ -14,8 +14,8 @@ layout: default
       <div class="col-sm-12 col-md-3 col-lg-2 datetime">
         <span class="post-meta">
           <time datetime="{{ post.date | date_to_long_string }}">
-            <span class="day"><a href="{{ site.domain }}/blog/{{ post.date | date: '%Y' }}/{{ post.date | date: '%m' }}/{{ post.date | date: '%d' }}/">{{ post.date | date: "%d" }}</a></span>
-            <span class="month-year"><a href="{{ site.domain }}/blog/{{ post.date | date: '%Y' }}/{{ post.date | date: '%m' }}/">{{ post.date | date: "%b" }}</a></span><span class="month-year"><a href="{{ site.domain }}/blog/{{ post.date | date: '%Y' }}/">{{ post.date | date: "%Y" }}</a></span>
+            <span class="day"><a href="{{ site.domain }}/blog/date/{{ post.date | date: '%Y' }}/{{ post.date | date: '%m' }}/{{ post.date | date: '%d' }}/">{{ post.date | date: "%d" }}</a></span>
+            <span class="month-year"><a href="{{ site.domain }}/blog/date/{{ post.date | date: '%Y' }}/{{ post.date | date: '%m' }}/">{{ post.date | date: "%b" }}</a></span><span class="month-year"><a href="{{ site.domain }}/blog/date/{{ post.date | date: '%Y' }}/">{{ post.date | date: "%Y" }}</a></span>
           </time>
         </span>
       </div>
