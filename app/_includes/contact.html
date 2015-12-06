@@ -18,7 +18,7 @@
         <p class="address">{{ widget.name }}</p>
         <p class="address">
           {% for item in widget.content %}
-          <a href="{{ item.url }}"><i class="icon {{ item.icon }}"></i>{{ item.text }}</a> <br />
+          <a href="{{ item.url }}"><i class="icon {{ item.icon }}"></i> {{ item.text }}</a> <br />
           {% endfor %}
         </p>
       </div>
