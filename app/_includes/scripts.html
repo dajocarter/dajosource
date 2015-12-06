@@ -1,1 +1,5 @@
+{% if site.domain == 'http://localhost:3000' %}
+<script src="/_js/script.js"></script>
+{% else %}
 <script src="/js/main.min.js"></script>
+{% endif %}

@@ -45,9 +45,9 @@ module.exports = function(grunt) {
         bsFiles: {
           src: [
             '.jekyll/**/*.html',
-            '.tmp/_css/**/*.css',
-            '{.tmp,<%= yeoman.app %>}/js/**/*.js',
-            '{<%= yeoman.app %>}/_bower_components/**/*.js',
+            '.tmp/_css/*.css',
+            '.tmp/_js/*.js',
+            '<%= yeoman.app %>/_bower_components/**/*.js',
             '<%= yeoman.app %>/img/**/*.{gif,jpg,jpeg,png,svg,webp}'
           ]
         },
@@ -133,7 +133,7 @@ module.exports = function(grunt) {
         files: [{
           expand: true,
           cwd: '<%= yeoman.app %>/_scss',
-          src: '**/*.{scss,sass}',
+          src: '*.scss',
           dest: '.tmp/_css',
           ext: '.css'
         }]
@@ -150,9 +150,9 @@ module.exports = function(grunt) {
       },
       dist: {
         expand: true,
-        cwd: '.tmp',
-        src: '**/{_css,concat}/*.css',
-        dest: '.tmp'
+        cwd: '.tmp/_css',
+        src: '*.css',
+        dest: '<%= yeoman.app %>/_css'
       }
     },
     jekyll: {
@@ -206,12 +206,12 @@ module.exports = function(grunt) {
           '<%= yeoman.app %>/_bower_components/magnific-popup/dist/jquery.magnific-popup.js',
           '<%= yeoman.app %>/_bower_components/waypoints/lib/jquery.waypoints.js',
           '<%= yeoman.app %>/_bower_components/flexslider/jquery.flexslider.js',
-          '<%= yeoman.app %>/_bower_components/fittext/fittext.js',
+          '<%= yeoman.app %>/_bower_components/FitText.js/jquery.fittext.js',
           '<%= yeoman.app %>/_bower_components/MathJax/MathJax.js',
           '<%= yeoman.app %>/_js/plugins.js',
           '<%= yeoman.app %>/_js/main.js'
         ],
-        dest: '.tmp/concat/script.js'
+        dest: '<%= yeoman.app %>/_js/script.js'
       }
     },
     // Usemin adds files to uglify
@@ -223,7 +223,7 @@ module.exports = function(grunt) {
       },
       dist: {
         files: {
-          '<%= yeoman.dist %>/js/main.min.js': '.tmp/concat/script.js'
+          '<%= yeoman.dist %>/js/main.min.js': '<%= yeoman.app %>/_js/script.js'
         }
       }
     },
@@ -265,6 +265,24 @@ module.exports = function(grunt) {
       }
     },
     copy: {
+      server: {
+        files: [{
+          expand: true,
+          cwd: '<%= yeoman.app %>/_bower_components/Ionicons/fonts',
+          src: [
+            '*.{eot,svg,ttf,woff}'
+          ],
+          dest: '<%= yeoman.app %>/fonts'
+        }, {
+          expand: true,
+          cwd: '<%= yeoman.app %>/_bower_components/MathJax',
+          src: [
+            'extensions/MathMenu.js',
+            'extensions/MathZoom.js'
+          ],
+          dest: '<%= yeoman.app %>'
+        }]
+      },
       dist: {
         files: [{
           expand: true,
@@ -296,15 +314,14 @@ module.exports = function(grunt) {
             '*.{eot,svg,ttf,woff}',
           ],
           dest: '<%= yeoman.dist %>/fonts'
-        }]
-      },
-      // Copy CSS into .tmp directory for Autoprefixer processing
-      stageCss: {
-        files: [{
+        }, {
           expand: true,
-          cwd: '<%= yeoman.app %>/css',
-          src: '**/*.css',
-          dest: '.tmp/_css'
+          cwd: '<%= yeoman.app %>/_bower_components/MathJax',
+          src: [
+            'extensions/MathMenu.js',
+            'extensions/MathZoom.js'
+          ],
+          dest: '<%= yeoman.dist %>'
         }]
       }
     },
@@ -349,7 +366,6 @@ module.exports = function(grunt) {
     concurrent: {
       server: [
         'sass:server',
-        'copy:stageCss',
         'jekyll:server'
       ]
     }
@@ -363,8 +379,10 @@ module.exports = function(grunt) {
 
     grunt.task.run([
       'clean:server',
+      'copy:server',
       'concurrent:server',
       'postcss:dist',
+      'concat:dist',
       'browserSync:server',
       'watch'
     ]);

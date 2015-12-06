@@ -4,8 +4,11 @@
     {% include meta.html %}
 
     <!-- Place favicon.ico and apple-touch-icon(s) in the root directory -->
-
+    {% if site.domain == 'http://localhost:3000' %}
+    <link rel="stylesheet" href="/_css/main.css">
+    {% else %}
     <link rel="stylesheet" href="/css/main.css">
+    {% endif %}
 
   </head>
   <body {% if page.is_post %} class="post-template" {% endif %}>
