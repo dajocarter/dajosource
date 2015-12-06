@@ -202,6 +202,7 @@ module.exports = function(grunt) {
       dist: {
         src: [
           '<%= yeoman.app %>/_bower_components/jquery/dist/jquery.js',
+          '<%= yeoman.app %>/_bower_components/modernizr/modernizr.js',
           '<%= yeoman.app %>/_bower_components/magnific-popup/dist/jquery.magnific-popup.js',
           '<%= yeoman.app %>/_bower_components/waypoints/lib/jquery.waypoints.js',
           '<%= yeoman.app %>/_bower_components/flexslider/jquery.flexslider.js',
@@ -272,7 +273,6 @@ module.exports = function(grunt) {
             // Jekyll processes and moves HTML and text files.
             // Usemin moves CSS and javascript inside of Usemin blocks.
             // Copy moves asset files and directories.
-            'css/*',
             'img/*',
             // Like Jekyll, exclude files & folders prefixed with an underscore.
             //'!**/_*{,/**}',
@@ -289,6 +289,13 @@ module.exports = function(grunt) {
             'apple-touch*.png'
           ],
           dest: '<%= yeoman.dist %>'
+        }, {
+          expand: true,
+          cwd: '<%= yeoman.app %>/_bower_components/Ionicons/fonts',
+          src: [
+            '*.{eot,svg,ttf,woff}',
+          ],
+          dest: '<%= yeoman.dist %>/fonts'
         }]
       },
       // Copy CSS into .tmp directory for Autoprefixer processing
