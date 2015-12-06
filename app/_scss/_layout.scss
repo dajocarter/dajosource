@@ -68,6 +68,10 @@ body {
       margin: 0 auto 18px auto;
       text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.8);
       text-transform: capitalize;
+
+      .category {
+        color: $teal;
+      }
     }
 
     h3 {
