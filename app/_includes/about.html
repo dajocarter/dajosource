@@ -24,7 +24,7 @@
         <div class="columns download">
           <p>
             {% for button in site.data.about.buttons %}
-            <a href="{{ button.url }}" class="button"><i class="icon {{ button.icon }}"></i>{{ button.text }}</a>
+            <a href="{{ button.url | prepend: site.domain }}" target-"_blank" class="button"><i class="icon {{ button.icon }}"></i>{{ button.text }}</a>
             {% endfor %}
           </p>
         </div>
