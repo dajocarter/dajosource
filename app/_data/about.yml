@@ -4,9 +4,11 @@ contact:
   content:
   - text: '@dajocarter'
     url: '//twitter.com/dajocarter'
+    icon: ion-social-twitter
   - text: dajocarter@gmail.com
     url: mailto:dajocarter@gmail.com
+    icon: ion-email
 buttons:
-- url: "#"
+- url: "/downloads/David_Carter-Resume.pdf"
   icon: ion-ios-cloud-download
   text: Download Resume

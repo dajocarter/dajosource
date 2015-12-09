@@ -20,6 +20,15 @@
     text-align: center;
     line-height: 1;
 
+    a {
+      color: $teal;
+
+      &:hover,
+      &:active {
+        color: $orange;
+      }
+    }
+
     .day {
       display: block;
       font-size: 5.2rem;
@@ -46,7 +55,12 @@
     line-height: 1.1;
 
     a {
-      color: white;
+      color: $teal;
+
+      &:hover,
+      &:active {
+        color: $orange;
+      }
     }
   }
 
@@ -71,13 +85,14 @@
     a {
       display: inline-block;
       padding: 0.5rem 1rem;
-      color: white;
-      border: 1px solid white;
+      color: $teal;
+      border: 1px solid $teal;
       border-radius: 2px;
 
-      &:hover {
-        color: $teal;
-        border: 1px solid $teal;
+      &:hover,
+      &:active {
+        color: $orange;
+        border: 1px solid $orange;
       }
     }
   }

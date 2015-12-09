@@ -7,7 +7,7 @@
                 <div class="columns portfolio-item">
                     <div class="item-wrap">
                         <a href="#modal-{{ forloop.index }}" title="">
-                            <img src="/_img/{{ item.img }}">
+                            <img src="/img/{{ item.img }}">
                             <div class="overlay">
                                 <div class="portfolio-item-meta">
                                     <h5>{{ item.title }}</h5>
@@ -23,10 +23,10 @@
         </div>
         {% for item in site.data.portfolio %}
         <div id="modal-{{ forloop.index }}" class="popup-modal mfp-hide">
-            <img class="scale-with-grid" src="/_img/{{ item.img }}" alt="" />
+            <img class="scale-with-grid" src="/img/{{ item.img }}" alt="" />
             <div class="description-box">
                 <h4>{{ item.title }}</h4>
-                <p>{{ item.content }}.</p>
+                <p>{{ item.content }}</p>
                 <span class="categories"><i class="icon ion-pricetag"></i>{{ item.tags }}</span>
             </div>
             <div class="link-box">

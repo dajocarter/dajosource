@@ -1,6 +1,23 @@
 <div class="row banner">
 	<div class="banner-text">
-		<h1 class="responsive-headline">{{ page.title | capitalize }}</h1>
+		<h1 class="responsive-headline">
+		{% if page.url contains 'category' %}
+			Posts in the <span class="category">{{ page.title }}</span> category
+		{% elsif page.url contains 'tag' %}
+			Posts in the <span class="category">{{ page.title }}</span> tag
+		{% elsif page.url contains 'date' %}
+			{% assign pathParts = page.path | split: "/" %} {% assign length = pathParts.size %}
+			{% if length == 4 %}
+				Posts written in <span class="category">{{ page.date | date: '%Y' }}</span>
+			{% elsif length == 5 %}
+				Posts written in <span class="category">{{ page.date | date: '%B %Y' }}</span>
+			{% elsif length == 6 %}
+				Posts written on <span class="category">{{ page.date | date: '%B %-d %Y' }}</span>
+			{% endif %}
+		{% else %}
+			{{ page.title }}
+		{% endif %}
+		</h1>
 		<h3>{{ page.description }}</h3>
 
 		{% if page.url == "/" %}

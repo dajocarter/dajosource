@@ -4,21 +4,12 @@
     {% include meta.html %}
 
     <!-- Place favicon.ico and apple-touch-icon(s) in the root directory -->
-
-    <!-- build:css({app,.tmp}) /_css/main.css -->
-    <link rel="stylesheet" href="/_bower_components/normalize-css/normalize.css">
-    <link rel="stylesheet" href="/_bower_components/magnific-popup/dist/magnific-popup.css">
-    <link rel="stylesheet" href="/_bower_components/flexslider/flexslider.css">
-    <link rel="stylesheet" href="/_css/syntax.css">
+    {% if site.domain == 'http://localhost:3000' %}
     <link rel="stylesheet" href="/_css/main.css">
-    <!-- endbuild -->
+    {% else %}
+    <link rel="stylesheet" href="/css/main.css">
+    {% endif %}
 
-    <link rel="stylesheet" href="//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-
-    <!-- build:js(app) /_js/head-scripts.js -->
-    <!-- Replace with a custom modernizer build for production -->
-    <script src="/_bower_components/modernizr/modernizr.js"></script>
-    <!-- endbuild -->
   </head>
   <body {% if page.is_post %} class="post-template" {% endif %}>
     <!--[if lt IE 8]>
