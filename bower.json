@@ -7,7 +7,6 @@
     "modernizr": "~2.8.3"
   },
   "devDependencies": {
-    "Ionicons": "ionicons#~2.0.1",
     "waypoints": "~4.0.0",
     "magnific-popup": "~1.0.0",
     "flexslider": "~2.5.0",
