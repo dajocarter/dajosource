@@ -670,7 +670,6 @@ $skills: (photoshop: (percent: 0.6), illustrator: (percent: 0.55), wordpress: (p
   padding-bottom: 48px;
 
   h1 {
-    font: 18px/24px 'opensans-bold', sans-serif;
     text-transform: uppercase;
     letter-spacing: 3px;
     color: #fff;
@@ -681,8 +680,6 @@ $skills: (photoshop: (percent: 0.6), illustrator: (percent: 0.55), wordpress: (p
   }
 
   .header-col h1:before {
-    font-family: 'Ionicons';
-    content: "\f26c";
     padding-right: 10px;
     font-size: 72px;
     line-height: 72px;
@@ -748,7 +745,6 @@ $skills: (photoshop: (percent: 0.6), illustrator: (percent: 0.55), wordpress: (p
   }
 
   h1 {
-    font: 18px/24px 'opensans-bold', sans-serif;
     text-transform: uppercase;
     letter-spacing: 3px;
     color: #fff;
@@ -762,8 +758,6 @@ $skills: (photoshop: (percent: 0.6), illustrator: (percent: 0.55), wordpress: (p
     padding-top: 9px;
 
     h1:before {
-      font-family: 'Ionicons';
-      content: "\f347";
       padding-right: 10px;
       font-size: 72px;
       line-height: 72px;
@@ -955,7 +949,6 @@ $skills: (photoshop: (percent: 0.6), illustrator: (percent: 0.55), wordpress: (p
   }
 
   h1 {
-    font: 18px/24px 'opensans-bold', sans-serif;
     text-transform: uppercase;
     letter-spacing: 3px;
     color: #EBEEEE;
@@ -966,8 +959,6 @@ $skills: (photoshop: (percent: 0.6), illustrator: (percent: 0.55), wordpress: (p
     }
 
     &:before {
-      font-family: 'Ionicons';
-      content: "\f132";
       padding-right: 10px;
       font-size: 72px;
       line-height: 72px;
