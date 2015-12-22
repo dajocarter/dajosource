@@ -7,7 +7,7 @@ widgets:
     content:
       - text: '@dajocarter'
         url: '//twitter.com/dajocarter'
-        icon: ion-social-twitter
+        icon: icon-twitter
       - text: dajocarter@gmail.com
         url: mailto:dajocarter@gmail.com
-        icon: ion-email
+        icon: icon-envelope
